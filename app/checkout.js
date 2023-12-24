@@ -16,7 +16,7 @@ export async function checkout({ lineItems }) {
         const { error } = await stripe.redirectToCheckout({
             mode: "subscription",
             lineItems,
-            successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
+            successUrl: `https://parcels-pi.vercel.app/api/auth/login`,
             cancelUrl: window.location.origin,
         });
 
