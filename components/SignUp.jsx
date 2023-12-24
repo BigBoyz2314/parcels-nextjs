@@ -1,5 +1,6 @@
 import * as React from "react";
 import Track from "./Track";
+import Image from "next/image";
 
 function SignUp(props) {
   return (
