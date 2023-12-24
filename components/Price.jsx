@@ -123,7 +123,7 @@ const Price = () => {
               Sales Chanel Integration
             </div>
           </div>
-          <div className="justify-between items-stretch bg-black flex gap-2 mt-5 px-20 py-4 rounded-[100px] max-md:px-5">
+          <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuuCHGDVzvQrZq27vLj9qW",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-5 px-20 py-4 rounded-[100px] max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
               Get Started
             </div>
@@ -132,7 +132,7 @@ const Price = () => {
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/98ec53add1d3fb00a37f96663cefead138ce3cc0bf7ad6897cb726c431cf6716?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
               className="aspect-square object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
             />
-          </div>
+          </button>
         </div>
       </div>
       <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
@@ -200,7 +200,7 @@ const Price = () => {
               Sales Chanel Integration
             </div>
           </div>
-          <div className="justify-between items-stretch bg-black flex gap-2 mt-16 px-20 py-4 rounded-[100px] max-md:mt-10 max-md:px-5">
+          <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuwrHGDVzvQrZqNIQABf00",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-16 px-20 py-4 rounded-[100px] max-md:mt-10 max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
               Get Started
             </div>
@@ -209,7 +209,7 @@ const Price = () => {
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/98ec53add1d3fb00a37f96663cefead138ce3cc0bf7ad6897cb726c431cf6716?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
               className="aspect-square object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
             />
-          </div>
+          </button>
         </div>
       </div>
     </div>
