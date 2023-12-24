@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import Enterprise from "./Enterprise";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
-function Pricing(props) {
+function Pricing() {
 
   const { user, error, isLoading } = useUser();
 
@@ -64,18 +64,13 @@ function Pricing(props) {
               <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
                 ABOUT
               </a>
-              <a href="/login" className="text-white text-lg leading-7 self-center my-auto">
+              <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
                 LOGIN
               </a>
-              <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
+              <a href="/#" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
                 <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
-                  SIGN UP
+                  SIGN UP <span className="font-bold text-2xl/[0px]">&rarr;</span>
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/97531b2ae38f805755273359846ea369501ad9a3c1a00cb18da90f9ca5813c84?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-                  className="aspect-[0.95] object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
-                />
               </a>
             </div>
           </div>

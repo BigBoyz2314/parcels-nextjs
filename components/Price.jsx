@@ -1,4 +1,3 @@
-"use client";
 import { checkout } from '@/app/checkout'
 import React from 'react'
 
