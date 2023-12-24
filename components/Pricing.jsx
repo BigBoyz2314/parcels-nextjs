@@ -1,21 +1,62 @@
+"use client"
 import * as React from "react";
 import Track from "./Track";
 import PayAsYouGo from "./PayAsYouGo";
+import Image from "next/image";
 import Price from "./Price";
 import Footer from "./Footer";
 import Enterprise from "./Enterprise";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 function Pricing(props) {
+
+  const { user, error, isLoading } = useUser();
+
   return (
     <div className="bg-black flex flex-col items-stretch pb-12">
       <div className="bg-neutral-900 flex w-full flex-col items-center pt-6 pb-12 px-16 max-md:max-w-full max-md:px-5">
         <div className="flex w-full max-w-[1230px] flex-col mb-11 max-md:max-w-full max-md:mb-10">
-          <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+        {(() => {
+        if (user) {
+          return (
+            <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
             <a href="/">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f98654f221b0762734e422e3242ffa8f0a6d7504dccdc15d1e54129801d7b37?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+            <Image
+                  src="/logo.svg"
+                  alt="Parcels.com logo"
+                  quality={50}
+                  width={0}
+                  height={0}
+                  priority={true}
+                  className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+            />
+            </a>
+              <Track/>
+            <div className="flex items-stretch justify-between gap-5 self-start mt-5 max-md:max-w-full max-md:flex-wrap">
+              <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
+                ABOUT
+              </a>
+              <a href="#" className="text-white text-lg leading-7 self-center my-auto">
+                { user.name }
+              </a>
+              <a href="/api/auth/logout" className="text-white text-lg leading-7 self-center my-auto">
+                LOGOUT
+              </a>
+            </div>
+          </div>
+          )
+        } else {
+          return (
+            <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+            <a href="/">
+            <Image
+                  src="/logo.svg"
+                  alt="Parcels.com logo"
+                  quality={50}
+                  width={0}
+                  height={0}
+                  priority={true}
+                  className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
             />
             </a>
             <div className="flex items-stretch justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">
@@ -38,6 +79,9 @@ function Pricing(props) {
               </a>
             </div>
           </div>
+          )
+        }})()}
+
           <div className="text-white text-center text-3xl leading-10 self-center mt-32 max-md:max-w-full max-md:mt-10">
             Pick your plan. Change whenever you want.
           </div>

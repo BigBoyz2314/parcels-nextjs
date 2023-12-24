@@ -57,11 +57,6 @@ const Form2 = (props) => {
                 <div className="text-white text-xs leading-6 grow whitespace-nowrap">
                   Why
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/96f8be7b9a96258b2fb8dbed026a6a35a4c584a95f84208e804da25c01c5992a?apiKey=1a3972c800b14c44978c57efa3bb67ae&"
-                  className="aspect-square object-contain object-center w-4 overflow-hidden self-center shrink-0 max-w-full my-auto"
-                />
               </div>
             </div>
             <div className="bg-white flex w-full flex-col justify-center mt-2 pl-2 rounded-lg items-start max-sm:mb-0 max-sm:pb-9">

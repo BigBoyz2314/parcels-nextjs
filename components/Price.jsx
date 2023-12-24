@@ -1,3 +1,4 @@
+"use client";
 import { checkout } from '@/app/checkout'
 import React from 'react'
 
@@ -48,13 +49,9 @@ const Price = () => {
           </div>
           <button onClick={(() => {checkout({lineItems:[{price:"price_1OQurdHGDVzvQrZqj97ANHhN",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-9 mb-1 px-20 py-4 rounded-[100px] max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-              Get Started
+              Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/98ec53add1d3fb00a37f96663cefead138ce3cc0bf7ad6897cb726c431cf6716?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-square object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
-            />
+            
           </button>
         </div>
       </div>
@@ -125,13 +122,9 @@ const Price = () => {
           </div>
           <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuuCHGDVzvQrZq27vLj9qW",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-5 px-20 py-4 rounded-[100px] max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-              Get Started
+              Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/98ec53add1d3fb00a37f96663cefead138ce3cc0bf7ad6897cb726c431cf6716?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-square object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
-            />
+            
           </button>
         </div>
       </div>
@@ -202,13 +195,8 @@ const Price = () => {
           </div>
           <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuwrHGDVzvQrZqNIQABf00",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-16 px-20 py-4 rounded-[100px] max-md:mt-10 max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-              Get Started
+              Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/98ec53add1d3fb00a37f96663cefead138ce3cc0bf7ad6897cb726c431cf6716?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-square object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
-            />
           </button>
         </div>
       </div>

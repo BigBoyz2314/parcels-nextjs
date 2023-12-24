@@ -1,43 +1,92 @@
+"use client"
 import * as React from "react";
 import Track from "./Track";
 import Footer from "./Footer";
+import Image from "next/image";
+import { useUser } from '@auth0/nextjs-auth0/client';
 
 function About(props) {
+
+  const { user, error, isLoading } = useUser();
+
   return (
     <div className="bg-black flex flex-col pt-6 pb-12">
-      <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/326245c23aceb3585a0207fe833f8846ff31993ab0d71a5cc8a39e54e62ff503?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-          className="absolute h-full w-full object-cover object-center inset-0 z-2"
-        />
-      <div className="self-center z-10 flex w-full max-w-[1230px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-        <a href="/">
-            <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/cef57e93d75a33f8466b4ddaa0ecfa7160742ef81899e7f9d591b5f1629f11e8?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-            className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
-            />
-        </a>
-        <div className="flex items-stretch justify-between gap-5 px-5 self-start max-md:max-w-full max-md:flex-wrap">
-          <Track/>
-          <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
-            ABOUT
-          </a>
-          <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
-            LOGIN
-          </a>
-          <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
-            <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
-              SIGN UP
+      <Image
+        src="/Ellipse.svg"
+        alt="Parcels.com logo"
+        quality={100}
+        width={0}
+        height={0}
+        priority={true}
+        className="absolute h-full w-full object-cover object-center inset-0"
+      />
+
+      {(() => {
+        if (user) {
+          return (  
+            <div className="self-center z-10 flex w-full max-w-[1230px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+            <a href="/">
+              <Image
+                src="/logo.svg"
+                alt="Parcels.com logo"
+                quality={50}
+                width={0}
+                height={0}
+                priority={true}
+                className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+                />
+            </a>
+              <Track/>
+            <div className="flex items-stretch justify-between gap-5 px-5 mt-5 self-start max-md:max-w-full max-md:flex-wrap">
+              <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
+                ABOUT
+              </a>
+              <a href="#" className="text-white text-lg leading-7 self-center my-auto">
+                { user.name }
+              </a>
+              <a href="/api/auth/logout" className="text-white text-lg leading-7 self-center my-auto">
+                LOGOUT
+              </a>
             </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c806c196f0e5dbd5c7d453b8c5dfa410e69f749946db92176f0edbb68b9e510a?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-[0.95] object-contain object-center w-[21px] overflow-hidden shrink-0 max-w-full self-start"
-            />
+          </div>
+        )
+        }
+        else {
+          return (
+          <div className="self-center z-10 flex w-full max-w-[1230px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+          <a href="/">
+            <Image
+              src="/logo.svg"
+              alt="Parcels.com logo"
+              quality={50}
+              width={0}
+              height={0}
+              priority={true}
+              className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+              />
           </a>
+          <div className="flex items-stretch justify-between gap-5 px-5 self-start max-md:max-w-full max-md:flex-wrap">
+            <Track/>
+            <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
+              ABOUT
+            </a>
+            <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
+              LOGIN
+            </a>
+            <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
+              <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
+                SIGN UP <span className="font-bold text-2xl/[0px]">&rarr;</span>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
+
+        )
+        }
+          
+          
+        })()}
+      
       <div className="text-white text-center text-3xl self-center whitespace-nowrap mt-32 max-md:mt-10 z-10">
         Our Mission
       </div>

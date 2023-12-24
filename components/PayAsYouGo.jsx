@@ -1,4 +1,6 @@
+"use client"
 import React from 'react'
+import { checkout } from '@/app/checkout'
 
 const PayAsYouGo = () => {
   return (
@@ -50,14 +52,9 @@ const PayAsYouGo = () => {
                 </div>
                 <div className="justify-center items-center bg-lime-600 flex flex-col mt-5 px-16 py-5 rounded-[52.131px] max-md:max-w-full max-md:px-5">
                   <div className="flex items-stretch gap-2">
-                    <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-                      Get Started
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/f15a922263a1e6e370a021c5de9c130cfb05a2a2e5f9b82597e93064bf291ac8?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-                      className="aspect-square object-contain object-center w-[22px] overflow-hidden shrink-0 max-w-full self-start"
-                    />
+                    <button onClick={(() => {checkout({lineItems:[{price:"price_1OQyOcHGDVzvQrZquB8SZJpV",quantity:1}]})})} className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
+                      Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
+                    </button>
                   </div>
                 </div>
               </div>

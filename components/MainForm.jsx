@@ -6,6 +6,7 @@ import Form3 from './Form3'
 import Form4 from './Form4'
 import Footer from './Footer'
 import Track from './Track'
+import Image from 'next/image'
 import { useState } from 'react';
 
 const MainForm = () => {
@@ -121,7 +122,7 @@ const MainForm = () => {
         }
     };
 
-    const [activeTab, setActiveTab] = useState(2)
+    const [activeTab, setActiveTab] = useState(0)
 
     const formElements = [
         <Form1 data={data} handleChange={handleChange} />,
@@ -135,18 +136,26 @@ const MainForm = () => {
     
     <div className="bg-black flex flex-col items-stretch pb-12">
       <div className="flex-col justify-end items-center overflow-hidden relative flex min-h-[741px] w-full pt-6 pb-12 px-16 max-md:max-w-full max-md:px-5">
-      <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/326245c23aceb3585a0207fe833f8846ff31993ab0d71a5cc8a39e54e62ff503?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-          className="absolute h-full w-full object-cover object-center inset-0 z-0"
-        />
+      <Image
+        src="/Ellipse.svg"
+        alt="Parcels.com logo"
+        quality={100}
+        width={0}
+        height={0}
+        priority={true}
+        className="absolute h-full w-full object-cover object-center inset-0"
+      />
         <div className="relative flex w-full max-w-[1230px] flex-col mb-14 max-md:max-w-full max-md:mb-10">
           <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
             <a href="/">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/94b6b27a776c7da42933901bb4062bde9c6bb7f24ed9b1f757dc6cf171e779cf?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-              className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+            <Image
+                  src="/logo.svg"
+                  alt="Parcels.com logo"
+                  quality={50}
+                  width={0}
+                  height={0}
+                  priority={true}
+                  className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
             />
             </a>
             <div className="flex items-stretch justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">

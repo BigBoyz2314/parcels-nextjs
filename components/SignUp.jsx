@@ -12,10 +12,14 @@ function SignUp(props) {
       <div className="flex w-full max-w-[1230px] flex-col mb-9 max-md:max-w-full z-10">
         <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
         <a href="/">
-            <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/cef57e93d75a33f8466b4ddaa0ecfa7160742ef81899e7f9d591b5f1629f11e8?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-            className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
+        <Image
+          src="/logo.svg"
+          alt="Parcels.com logo"
+          quality={50}
+          width={0}
+          height={0}
+          priority={true}
+          className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
             />
         </a>
           <div className="flex items-stretch justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">
