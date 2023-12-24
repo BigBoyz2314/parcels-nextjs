@@ -23,10 +23,10 @@ function About(props) {
           <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
             ABOUT
           </a>
-          <a href="/login" className="text-white text-lg leading-7 self-center my-auto">
+          <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
             LOGIN
           </a>
-          <a href="/signup" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
+          <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
             <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
               SIGN UP
             </div>
