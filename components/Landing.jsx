@@ -7,125 +7,38 @@ import Price from "./Price";
 import Footer from "./Footer";
 import Enterprise from "./Enterprise";
 import Image from "next/image";
+import Header from "./Header";
 
 function Landing(props) {
 
   const { user, error, isLoading } = useUser();
 
   return (
-    <div className="bg-black flex flex-col items-stretch pb-12">
-      {(() => {
-        if (user) {
-          return (
-            <div className="flex-col justify-end items-center overflow-hidden relative flex min-h-[741px] w-full pt-6 pb-12 px-16 max-md:max-w-full max-md:px-5">
-              <Image
-                src="/Ellipse.svg"
-                alt="Parcels.com logo"
-                quality={100}
-                width={0}
-                height={0}
-                priority={true}
-                className="absolute h-full w-full object-cover object-center inset-0"
-              />
-                <div className="relative flex w-full max-w-[1230px] flex-col mb-14 max-md:max-w-full max-md:mb-10">
-                  <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-                    <a href="/">
-                    <Image
-                    src="/logo.svg"
-                    alt="Parcels.com logo"
-                    quality={100}
-                    width={0}
-                    height={0}
-                    priority={true}
-                    className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
-                    />  
-                    </a>
-                    <Track/>
-                    <div className="flex items-stretch justify-between gap-5 self-start mt-5 max-md:max-w-full max-md:flex-wrap">
-                    <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
-                      ABOUT
-                    </a>
-                      <a href="#" className="text-white text-lg leading-7 self-center my-auto">
-                        { user.name }
-                      </a>
-                      <a href="/api/auth/logout" className="text-white text-lg leading-7 self-center my-auto">
-                        LOGOUT
-                      </a>
-                    </div>
-                  </div>
-                  <div className="text-white text-center text-3xl leading-10 self-center whitespace-nowrap mt-24 max-md:mt-10">
-                    On time shipping, every time
-                  </div>
-                  <div className="text-white text-center text-7xl font-semibold leading-[90px] self-center max-w-[928px] mt-11 max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-md:mt-10">
-                    Next gen deliveries, built for ecommerce
-                  </div>
-                  <a href="/pricing" className="items-stretch bg-lime-600 self-center flex gap-2 mt-16 px-6 py-5 rounded-[52.131px] max-md:mt-10 max-md:px-5 text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-                      Start sending a package <span className="font-bold text-2xl/[0px]">&rarr;</span>
-                  </a>
-                  <div className="text-white text-2xl leading-10 self-center whitespace-nowrap mt-16 max-md:mt-10">
-                    Check out some features below!
-                  </div>
-                </div>
-              </div>
-            )
-          } else {
-          return (
-            <div className="flex-col justify-end items-center overflow-hidden relative flex min-h-[741px] w-full pt-6 pb-12 px-16 max-md:max-w-full max-md:px-5">
-              <Image
-                src="/Ellipse.svg"
-                alt="Parcels.com logo"
-                quality={100}
-                width={0}
-                height={0}
-                priority={true}
-                className="absolute h-full w-full object-cover object-center inset-0"
-              />
-        <div className="relative flex w-full max-w-[1230px] flex-col mb-14 max-md:max-w-full max-md:mb-10">
-          <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-            <a href="/">
-            <Image
-                  src="/logo.svg"
-                  alt="Parcels.com logo"
-                  quality={100}
-                  width={0}
-                  height={0}
-                  priority={true}
-                  className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
-            />
-            </a>
-            <div className="flex items-stretch justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">
-              <Track/>
-              
-              <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
-                ABOUT
-              </a>
-              <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
-                LOGIN
-              </a>
-              <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
-                <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
-                  SIGN UP <span className="font-bold text-2xl/[0px]">&rarr;</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div className="text-white text-center text-3xl leading-10 self-center whitespace-nowrap mt-24 max-md:mt-10">
+    <div className="bg-black flex flex-col items-stretch">
+      <Image
+        src="/Ellipse.svg"
+        alt="Parcels.com logo"
+        quality={100}
+        width={0}
+        height={0}
+        priority={true}
+        className="absolute h-full z-0 w-full object-cover mt-28 object-center"
+      />
+      <Header/>
+      
+      
+      <div className="text-white z-10 text-center text-3xl leading-10 self-center whitespace-nowrap mt-24 max-md:mt-10">
             On time shipping, every time
           </div>
-          <div className="text-white text-center text-7xl font-semibold leading-[90px] self-center max-w-[928px] mt-11 max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-md:mt-10">
+          <div className="text-white z-10 text-center text-7xl font-semibold leading-[90px] self-center max-w-[928px] mt-11 max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-md:mt-10">
             Next gen deliveries, built for ecommerce
           </div>
-          <a href="/pricing" className="items-stretch bg-lime-600 self-center flex gap-2 mt-16 px-6 py-5 rounded-[52.131px] max-md:mt-10 max-md:px-5 text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
-              Start sending a package <span className="font-bold text-2xl/[0px]">&rarr;</span>
+          <a href="/pricing" className="items-stretch z-10 bg-lime-600 self-center flex gap-2 mt-16 px-6 py-5 rounded-[52.131px] max-md:mt-10 max-md:px-5 text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
+              Start sending a package <span className="font-bold text-2xl/[20px]">&rarr;</span>
           </a>
-          <div className="text-white text-2xl leading-10 self-center whitespace-nowrap mt-16 max-md:mt-10">
+          <div className="text-white text-2xl z-10 leading-10 self-center whitespace-nowrap mt-16 max-md:mt-10">
             Check out some features below!
           </div>
-        </div>
-      </div>
-                    )
-                  }
-              })()}
       
       <div className="self-center w-full max-w-[1144px] mt-14 px-5 max-md:max-w-full max-md:mt-10">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">

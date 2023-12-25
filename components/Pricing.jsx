@@ -7,6 +7,7 @@ import Price from "./Price";
 import Footer from "./Footer";
 import Enterprise from "./Enterprise";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import Header from "./Header";
 
 function Pricing() {
 
@@ -14,9 +15,8 @@ function Pricing() {
 
   return (
     <div className="bg-black flex flex-col items-stretch pb-12">
-      <div className="bg-neutral-900 flex w-full flex-col items-center pt-6 pb-12 px-16 max-md:max-w-full max-md:px-5">
-        <div className="flex w-full max-w-[1230px] flex-col mb-11 max-md:max-w-full max-md:mb-10">
-        {(() => {
+      <div className="bg-neutral-900 flex w-full flex-col ">
+        {/* {(() => {
         if (user) {
           return (
             <div className="self-stretch flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
@@ -75,7 +75,9 @@ function Pricing() {
             </div>
           </div>
           )
-        }})()}
+        }})()} */}
+
+        <Header/>
 
           <div className="text-white text-center text-3xl leading-10 self-center mt-32 max-md:max-w-full max-md:mt-10">
             Pick your plan. Change whenever you want.
@@ -83,14 +85,16 @@ function Pricing() {
           <div className="text-white text-center text-7xl font-semibold leading-[90px] self-center mt-11 max-md:max-w-full max-md:text-4xl max-md:mt-10">
             Choose The Best Price
           </div>
-          <div className="mx-16">
+          <div className="md:px-32 px-16">
           <PayAsYouGo/>
-          </div>
+          
 
           <Price/>
 
+{/* <div className="md:px-32 mb-5"> */}
           <Enterprise/>
-        </div>
+          {/* </div> */}
+          </div>
       </div>
       <Footer/>
     </div>

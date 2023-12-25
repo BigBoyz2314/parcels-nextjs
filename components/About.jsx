@@ -4,13 +4,14 @@ import Track from "./Track";
 import Footer from "./Footer";
 import Image from "next/image";
 import { useUser } from '@auth0/nextjs-auth0/client';
+import Header from "./Header";
 
 function About(props) {
 
   const { user, error, isLoading } = useUser();
 
   return (
-    <div className="bg-black flex flex-col pt-6 pb-12">
+    <div className="bg-black flex flex-col">
       <Image
         src="/Ellipse.svg"
         alt="Parcels.com logo"
@@ -18,74 +19,10 @@ function About(props) {
         width={0}
         height={0}
         priority={true}
-        className="absolute h-full w-full object-cover object-center inset-0"
+        className="absolute mt-28 h-full w-full object-cover object-center"
       />
 
-      {(() => {
-        if (user) {
-          return (  
-            <div className="self-center z-10 flex w-full max-w-[1230px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-            <a href="/">
-              <Image
-                src="/logo.svg"
-                alt="Parcels.com logo"
-                quality={50}
-                width={0}
-                height={0}
-                priority={true}
-                className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
-                />
-            </a>
-              <Track/>
-            <div className="flex items-stretch justify-between gap-5 px-5 mt-5 self-start max-md:max-w-full max-md:flex-wrap">
-              <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
-                ABOUT
-              </a>
-              <a href="#" className="text-white text-lg leading-7 self-center my-auto">
-                { user.name }
-              </a>
-              <a href="/api/auth/logout" className="text-white text-lg leading-7 self-center my-auto">
-                LOGOUT
-              </a>
-            </div>
-          </div>
-        )
-        }
-        else {
-          return (
-          <div className="self-center z-10 flex w-full max-w-[1230px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-          <a href="/">
-            <Image
-              src="/logo.svg"
-              alt="Parcels.com logo"
-              quality={50}
-              width={0}
-              height={0}
-              priority={true}
-              className="aspect-[1.78] object-contain object-center w-[107px] overflow-hidden shrink-0 max-w-full"
-              />
-          </a>
-          <div className="flex items-stretch justify-between gap-5 px-5 self-start max-md:max-w-full max-md:flex-wrap">
-            <Track/>
-            <a href="/about" className="text-white text-right text-lg leading-7 self-center my-auto">
-              ABOUT
-            </a>
-            <a href="/api/auth/login" className="text-white text-lg leading-7 self-center my-auto">
-              LOGIN
-            </a>
-            <a href="/pricing" className="items-stretch bg-lime-600 flex justify-between gap-2 px-10 py-5 rounded-[52.131px] max-md:px-5">
-              <div className="text-white text-center text-base font-bold leading-6 grow whitespace-nowrap">
-                SIGN UP <span className="font-bold text-2xl/[0px]">&rarr;</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        )
-        }
-          
-          
-        })()}
+        <Header/>
       
       <div className="text-white text-center text-3xl self-center whitespace-nowrap mt-32 max-md:mt-10 z-10">
         Our Mission
@@ -151,96 +88,153 @@ function About(props) {
             FAQs
           </div>
           <div className="justify-center items-stretch self-stretch flex flex-col mt-12 py-px border-t-zinc-800 border-t border-solid max-md:max-w-full max-md:mt-10">
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                Which Parcel plan is right for me?
-              </div>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >Which Parcels.com plan is right for me?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                Do you offer custom invoicing?
-              </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          Our Hobby plan is for personal, non-commercial use. Pro is for small teams with moderate bandwidth and collaboration requirements. Enterprise is for teams seeking greater performance, collaboration, and security. 
+          <br />
+          <br />
+          Contact our sales team to learn more.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >Do you offer custom invoicing?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
-            <div className="justify-between flex gap-5 py-7 border-b-zinc-800 border-b border-solid items-start max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                What are the limits for each plan?
-              </div>
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-                className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full"
-              />
-            </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                I went over my limits. What can I do?
-              </div>
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-                className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
-              />
-            </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                Can I buy additional bandwidth?
-              </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          Yes, we offer custom invoicing for Enterprise customers. Contact our sales team to learn more.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >What are the limits for each plan?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto max-md:max-w-full">
-                I have a Parcel free account, how do I upgrade to a paid plan?
-              </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          Our limits are listed here. Additionally, check out our Fair Use Policy.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >I went over my limits. What can I do?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                Is there a limit to how many teams I can have?
-              </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          We are glad you are growing and scaling with Vercel! Please contact us to discuss your resource requirements and we can customize a plan for your team.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >Can I buy additional bandwidth?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
-            <div className="justify-between flex gap-5 py-7 border-b-zinc-800 border-b border-solid items-start max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto max-md:max-w-full">
-                I want to transfer a domain name to Parcel. Is there a fee?
-              </div>
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-                className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full"
-              />
-            </div>
-            <div className="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-gray-200 text-base leading-6 grow shrink basis-auto">
-                How does Parcel calculate usage?
-              </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          Yes! On top of your included 1,000 GB of Bandwidth on Pro, you can pay as you go for additional Bandwidth at $40 per 100 GB, uncapped. If you have a free Parcels.com account, you are limited to 100 GB of Bandwidth and cannot purchase additional usage.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >I have a Parcels.com starter account, how do I upgrade to a larger plan?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
                 className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
               />
             </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          Thanks for continuing to use Parcels.com! Follow this guide to transfer your project to a team.
+          </p>
+        </details>
+          <details
+          class="justify-between items-stretch flex gap-5 py-7 border-b-zinc-800 border-b border-solid max-md:max-w-full max-md:flex-wrap open:shadow-lg mb-1 bg-none duration-300"
+        >
+          <summary
+            class="list-none text-gray-200 relative cursor-pointer pr-7"
+            >How does Parcel calculate usage?
+            <div
+              class="absolute top-0 right-0 px-1 py-0.5 cursor-pointer visible open:invisible"
+            >
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/06852fa129c98d5b4a826da93e5275b9c66e5f2baae2404ecc2f3e6805c4a297?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
+                className="aspect-square object-contain object-center w-4 justify-center items-center overflow-hidden shrink-0 max-w-full self-start"
+              />
+            </div>
+          </summary>
+          <p class="text-gray-200 pt-6">
+          We calculate the total response size which includes headers along with the number of bytes in the body. Anything served from our servers from your project’s domain will be counted as bandwidth (including JSON responses for Serverless Functions).
+          <br /><br />
+          When it comes to Serverless Functions though, GB-Hrs is calculated by multiplying the duration that your functions ran for by the amount of memory that was consumed by them.
+          <br /><br />
+          To learn more, check out the Usage documentation.
+          </p>
+        </details>
           </div>
         </div>
       </div>

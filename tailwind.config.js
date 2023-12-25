@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         'lime': {
           600: '#3cc600'
+        },
+        'neutral': {
+          900: '#121212'
         }
       },
       backgroundImage: {
