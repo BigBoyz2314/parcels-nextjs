@@ -19,7 +19,7 @@ function About(props) {
         width={0}
         height={0}
         priority={true}
-        className="absolute mt-28 h-full w-full object-cover object-center"
+        className="absolute mt-28 h-full w-full object-cover object-center max-md:hidden"
       />
 
         <Header/>
@@ -37,24 +37,29 @@ function About(props) {
         <span className="font-bold">secure</span> a faster, more personalized
         Web.
       </div>
-      <div className="self-center flex justify-between gap-5 mt-36 px-5 items-start max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+      <div className="self-center flex z-10 max-md:flex-col justify-between gap-5 mt-36 px-5 items-start max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+      <div className="flex flex-col bg-neutral-900 p-5 rounded-lg mb-3">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8e35adcd58eec0ccebf9dbd43af6ecd834f39bdc574f02974383f0e8b07f159?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1"
+          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1 mb-3"
         />
         <div className="flex grow basis-[0%] flex-col items-stretch">
           <div className="text-gray-200 text-2xl font-bold leading-8 tracking-tight">
             Easy
           </div>
           <div className="text-neutral-400 text-base leading-6 mt-2">
-            Building and deploying should be as easy as a single tap.
+            Building and deploying should 
+            <br />
+            be as easy as a single tap.
           </div>
         </div>
+      </div>
+      <div className="flex flex-col bg-neutral-900 p-4 rounded-lg mb-3">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1ebadb3c7d978f3bb8a5108407eb9aaf8917f49e505f8f0a5e46d42d4283730?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1"
+          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1 mb-2"
         />
         <div className="flex grow basis-[0%] flex-col items-stretch">
           <div className="text-gray-200 text-2xl font-bold leading-8 tracking-tight">
@@ -66,10 +71,12 @@ function About(props) {
             should be fast from everywhere.
           </div>
         </div>
+      </div>
+      <div className="flex flex-col bg-neutral-900 p-6 rounded-lg mb-3">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bb5cc201506434594ba611d103784e92cb0056a2fbe4019aa369aa7ae4e1a3d?apiKey=bc1qugrtknpjz52vc4m559q7zumkc4268kp7skrsee&"
-          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1"
+          className="aspect-[0.95] object-contain object-center w-10 justify-center items-center overflow-hidden shrink-0 max-w-full mt-1 mb-2"
         />
         <div className="flex grow basis-[0%] flex-col items-stretch">
           <div className="text-gray-200 text-2xl font-bold leading-8 tracking-tight">
@@ -81,6 +88,7 @@ function About(props) {
             and design enables everyone.
           </div>
         </div>
+      </div>
       </div>
       <div className="items-center bg-neutral-900 self-stretch flex w-full flex-col justify-center mt-32 px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
         <div className="flex w-[570px] max-w-full flex-col items-center mb-12 max-md:mb-10">

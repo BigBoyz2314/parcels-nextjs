@@ -53,7 +53,7 @@ function Header(props) {
   else {
     return (
         <div className="bg-neutral-900 z-10 flex flex-col justify-center items-center px-16 py-6 max-md:px-5">
-        <div className="flex w-full max-w-[1230px] items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+        <div className="flex w-full max-w-[1230px] items-center justify-between max-md:justify-center gap-5 max-md:max-w-full max-md:flex-wrap">
         <div className="items-start flex justify-between gap-5 my-auto">
             <a href="/">
           <Image

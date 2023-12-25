@@ -14,7 +14,7 @@ function Pricing() {
   const { user, error, isLoading } = useUser();
 
   return (
-    <div className="bg-black flex flex-col items-stretch pb-12">
+    <div className="bg-black flex flex-col items-stretch">
       <div className="bg-neutral-900 flex w-full flex-col ">
         {/* {(() => {
         if (user) {
