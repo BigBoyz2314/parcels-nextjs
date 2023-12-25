@@ -46,7 +46,7 @@ const Price = () => {
               SMS Notifications
             </div>
           </div>
-          <button onClick={(() => {checkout({lineItems:[{price:"price_1OQurdHGDVzvQrZqj97ANHhN",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-9 mb-1 px-20 py-4 rounded-[100px] max-md:px-5">
+          <button onClick={(() => {checkout({lineItems:[{price:"price_1ORCbRHGDVzvQrZqkKrYgDhu",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-9 mb-1 px-20 py-4 rounded-[100px] max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
               Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
@@ -119,7 +119,7 @@ const Price = () => {
               Sales Chanel Integration
             </div>
           </div>
-          <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuuCHGDVzvQrZq27vLj9qW",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-5 px-20 py-4 rounded-[100px] max-md:px-5">
+          <button onClick={(() => {checkout({lineItems:[{price:"price_1ORCcYHGDVzvQrZq9js6SItp",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-5 px-20 py-4 rounded-[100px] max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
               Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
@@ -192,7 +192,7 @@ const Price = () => {
               Sales Chanel Integration
             </div>
           </div>
-          <button onClick={(() => {checkout({lineItems:[{price:"price_1OQuwrHGDVzvQrZqNIQABf00",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-16 px-20 py-4 rounded-[100px] max-md:mt-10 max-md:px-5">
+          <button onClick={(() => {checkout({lineItems:[{price:"price_1ORCdOHGDVzvQrZqMfTaf4AX",quantity:1}]})})} className="justify-between items-stretch bg-black flex gap-2 mt-16 px-20 py-4 rounded-[100px] max-md:mt-10 max-md:px-5">
             <div className="text-white text-center text-base font-medium leading-6 grow whitespace-nowrap">
               Get Started <span className="font-bold text-2xl/[0px]">&rarr;</span>
             </div>
