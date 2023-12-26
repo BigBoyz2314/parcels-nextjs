@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import * as React from "react";
 import { useUser } from '@auth0/nextjs-auth0/client';
 import Track from "./Track";
@@ -8,12 +9,13 @@ import Footer from "./Footer";
 import Enterprise from "./Enterprise";
 import Image from "next/image";
 import Header from "./Header";
+import { Stripe } from "@stripe/stripe-js";
 
 function Landing(props) {
 
   const { user, error, isLoading } = useUser();
-
   return (
+    
     <div className="bg-black flex flex-col items-stretch">
       <Image
         src="/Ellipse.svg"
