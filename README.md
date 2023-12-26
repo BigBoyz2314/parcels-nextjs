@@ -1,39 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Prerequisites
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Node.js and npm installed on your local development machine.
+- A basic understanding of JavaScript and React.
 
 ## Project Structure
 
@@ -66,8 +34,22 @@ npm install
 
 ```
 
-## Prerequisites
+## Components
 
-- Node.js and npm installed on your local development machine.
-- A basic understanding of JavaScript and React.
+This project uses React and is organized into several components. Here's a brief overview of the key components:
+
+- `About.jsx`: This component renders the About page and also FAQ page of the application.
+- `Dashboard.jsx`: This component is responsible for rendering the Dashboard page.
+- `Enterprise.jsx`: This component renders the Enterprise element.
+- `Footer.jsx`: This component renders the footer across the application.
+- `Form1.jsx`, `Form2.jsx`, `Form3.jsx`, `Form4.jsx`: These components are responsible for rendering different parts of the form in the application (currently not in use).
+- `Header.jsx`: This component renders the header across the application.
+- `Landing.jsx`: This component renders the Landing page.
+- `MainForm.jsx`: This component is responsible for rendering the main form in the application (currently not in use).
+- `PayAsYouGo.jsx`: This component renders the Pay As You Go element.
+- `Price.jsx`: This component renders the Price element.
+- `Pricing.jsx`: This component renders the Pricing page.
+- `SignUp.jsx`: This component is responsible for rendering the Sign Up page (currently not in use).
+- `Success.jsx`: This component renders the Success page after a successful Stripe payment.
+- `Track.jsx`: This component renders the Tracking element.
 
