@@ -14,8 +14,8 @@ function Success() {
       <div className="bg-neutral-900 flex w-full flex-col ">
         <Header/>
         <Script src="getdata.js"></Script>
-        <div className="flex flex-col items-stretch justify-center max-w-[1230px] self-center mt-20 px-5 max-md:mt-10 max-md:px-5">
-            <h1 className="text-white font-semibold text-center" style={{fontSize: "5em"}}>Please Check Your Email To Active Your Account</h1>    
+        <div className="flex flex-col items-stretch justify-center max-w-[1230px] self-center mt-20 px-5 md:py-24 max-md:mt-10 max-md:px-5">
+            <h1 className="text-white font-semibold text-center" style={{fontSize: "5em"}}>PLEASE CHECK YOUR EMAIL FOR ACCOUNT ACTIVATION</h1>    
         </div>
       </div>
       <Footer/>
