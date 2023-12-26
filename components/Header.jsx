@@ -38,7 +38,7 @@ function Header(props) {
         <Track/>
 
         <div className="items-center self-stretch flex justify-between gap-5">
-          <a href="" className="text-white text-lg leading-7 grow whitespace-nowrap my-auto">
+          <a href="/dashboard" className="text-white text-lg leading-7 grow whitespace-nowrap my-auto">
           {user.name}
           </a>
           <a href="/api/auth/logout" className="text-white text-lg leading-7 grow whitespace-nowrap my-auto">

@@ -14,8 +14,7 @@ function Dashboard() {
         <div className="bg-black flex flex-col items-stretch">
             <div className="bg-neutral-900 flex w-full flex-col ">
                 <Header/>
-                <Script src="/app/getdata.js"></Script>
-                <h1>Welcome, {user ? user.name : "Guest"}!</h1>
+                <h1 className="text-white text-lg">Welcome, {user ? user.name : "Guest"}!</h1>
                 <p>{isLoading ? "Loading..." : error ? "Error loading user data" : ""}</p>
             </div>
             <Footer/>
