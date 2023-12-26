@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react";
-import Track from "./Track";
+
 import Footer from "./Footer";
 import Image from "next/image";
 import { useUser } from '@auth0/nextjs-auth0/client';

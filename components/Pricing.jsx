@@ -1,8 +1,6 @@
 "use client"
 import * as React from "react";
-import Track from "./Track";
 import PayAsYouGo from "./PayAsYouGo";
-import Image from "next/image";
 import Price from "./Price";
 import Footer from "./Footer";
 import Enterprise from "./Enterprise";

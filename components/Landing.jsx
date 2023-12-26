@@ -1,15 +1,12 @@
 "use client";
-import { useEffect } from "react";
 import * as React from "react";
 import { useUser } from '@auth0/nextjs-auth0/client';
-import Track from "./Track";
 import PayAsYouGo from "./PayAsYouGo";
 import Price from "./Price";
 import Footer from "./Footer";
 import Enterprise from "./Enterprise";
 import Image from "next/image";
 import Header from "./Header";
-import { Stripe } from "@stripe/stripe-js";
 
 function Landing(props) {
 
