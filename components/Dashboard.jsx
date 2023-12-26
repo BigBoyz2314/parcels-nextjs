@@ -13,9 +13,12 @@ function Dashboard() {
         <div className="bg-black flex flex-col items-stretch">
             <div className="bg-neutral-900 flex w-full flex-col ">
                 <Header/>
-                <h1 className="text-white text-lg">Welcome, {user ? user.name : "Guest"}!</h1>
-                <h1 className="text-white text-lg">Email: {user ? user.email : ""}!</h1>
+                <div className="px-24 py-5" style={{fontSize: "3em"}}>
+                <h1 className="text-white">Welcome, {user ? user.name : "Guest"}!</h1>
+                <br />
+                <h1 className="text-white">Email: {user ? user.email : ""}</h1>
                 <p>{isLoading ? "Loading..." : error ? "Error loading user data" : ""}</p>
+                </div>
             </div>
             <Footer/>
         </div>
